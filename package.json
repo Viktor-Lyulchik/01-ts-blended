@@ -1,11 +1,11 @@
 {
-  "name": "01-ts-basics",
+  "name": "01-ts-blended",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/01-ts-basics/",
+    "build": "vite build --base=/01-ts-blended/",
     "preview": "vite preview"
   },
   "devDependencies": {

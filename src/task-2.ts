@@ -1,13 +1,18 @@
-interface Product {
-  readonly id: number;
-  title: string;
-  description?: string;
+// Задача 2
+
+// Опис: Є функція, яка приймає суму (число) та тип валюти.
+type Currency = 'USD' | 'EUR' | 'UAH';
+interface ConvertObject {
+  amount: number;
+  currency: Currency;
 }
 
-const product: Product = {
-  id: 1,
-  title: 'Tablet',
-  description: 'Compact and fast',
-};
+function convertCurrency({ amount, currency }: ConvertObject): void {
+  console.log(`Converting ${amount} to ${currency}`);
+}
 
-console.log(`Product: ${JSON.stringify(product)}`);
+convertCurrency({ amount: 150, currency: 'USD' });
+// Завдання:
+
+// Типізуйте параметри функції дозволивши властивості currency лише одне із значень "USD", "EUR", "UAH".
+// Типізуйте повернення функції.

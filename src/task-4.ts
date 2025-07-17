@@ -1,10 +1,11 @@
-function printUserInfo(name: string, age: number, email?: string): void {
-  console.log('Name:', name);
-  console.log('Age:', age);
-  if (email) {
-    console.log('Email:', email);
-  }
-}
+// Задача 4
 
-printUserInfo('Alice', 30);
-printUserInfo('Bob', 25, 'bob@mail.com');
+// Опис: Є масив, який містить розміри екрана у пікселях.
+
+const dimensions: number[] = [1920, 1080];
+console.log(dimensions);
+
+// Завдання:
+
+// Додайте до змінної dimensions явну типізацію.
+// Переконайтеся, що TypeScript не дозволяє додавати до масиву значення інших типів (наприклад, рядки).

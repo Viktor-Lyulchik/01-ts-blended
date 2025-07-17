@@ -1,14 +1,21 @@
-function logStatus(status: 'loading' | 'success' | 'error'): void {
-  if (status === 'loading') {
-    console.log('Loading...');
-  } else if (status === 'success') {
-    console.log('Success!');
-  } else if (status === 'error') {
-    console.log('Something went wrong');
-  }
+// Задача 5
+interface Person {
+  name: string;
+  age: number;
 }
 
-logStatus('loading');
-logStatus('success');
-logStatus('error');
-// logStatus("loaded"); - here is error!!!
+type User = Person & { isAdmin: boolean };
+
+function createUser({ name, age }: Person): User {
+  return {
+    name,
+    age,
+    isAdmin: false,
+  };
+}
+
+console.log(createUser({ name: 'Alice', age: 30 }));
+
+// Завдання:
+
+// Типізуйте функцію повністю: параметри і повернення функції.
